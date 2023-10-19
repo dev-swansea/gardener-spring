@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Dotum";
+  src: url(../font/KoPubDotumMedium.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Dotum";
+}
+
+div.logo {
+  margin: 50px 0px 0px 0px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  zoom: 1.5;
+}
+
+/*로고 사이즈*/
+.logo>img{
+ 	width: 270px;
+ 	height: 180px; 
+ }
+ 
+form.find-pwd {
+  width: 250px;
+ margin: auto;
+  top: 300px;
+  zoom: 1.5;
+}
+
+/*아이디 입력*/
+form.find-pwd > input[name="loginId"] {
+	width: 200px;
+   margin: 0px 20px 15px;
+}
+
+/*이메일 입력*/
+form.find-pwd > input[name="email"] {
+  width: 200px;
+  margin: 0px 20px 15px;
+}
+
+/*인증번호 전송*/
+form.find-pwd > input[name="button"] {
+  width: 200px;
+  margin: 0px 20px 15px;
+}
+
+/*인증번호 입력*/
+form.find-pwd > input[name="number"] {
+  width: 100px;
+  margin: 0px 20px 15px;
+}
+
+/*인증확인*/
+form.find-pwd > input[name="check"] {
+  width: 75px;
+}
+
+/*비밀번호 입력*/
+form.find-pwd > input[name="pwd"] {
+  width: 200px;
+  margin: 0px 20px 15px;
+}
+
+/*비밀번호 변경 버튼*/
+form.find-pwd > button {
+  color: white;
+  font-size: 15px;
+  letter-spacing: 2px;
+  background-color: rgb(121, 193, 150);
+  border-radius: 10px;
+  width: 205px;
+  height: 25px;
+  margin: 0px 20px;
+  border: none;
+}
+
+form.find-pwd > button > a {
+  text-decoration: none;
+  color: white;
+}

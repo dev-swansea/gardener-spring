@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="com.gardener.mappers.SearchMapper">
+
+	<!-- 제목으로 검색 SQL -->
+    <select id="searchTitle" resultType="Search" parameterType="string">
+        <![CDATA[
+	        SELECT p.postnum, p.main_title, p.main_title_img, p.sub_title, p.content, p.category, p.total_cnt, p.favorite, p.create_date, m.nickname, m.intro
+			FROM MEMBER m JOIN POST p ON (m.LOGINID = p.LOGINID)
+			WHERE p.main_title LIKE '%'|| #{text} ||'%' AND p.PUBLIC_YN = 1
+        ]]>
+    </select>
+
+    <!-- 작가명으로 검색 SQL  -->
+    <select id="searchName" parameterType="String" resultType="com.gardener.domain.Search">
+       <![CDATA[
+	        SELECT p.postnum, p.main_title, p.main_title_img, p.sub_title, p.content, p.category, p.total_cnt, p.favorite, p.create_date, m.nickname, m.intro
+			FROM MEMBER m JOIN POST p ON (m.LOGINID = p.LOGINID)
+			WHERE m.nickname LIKE '%'|| #{text} ||'%' AND p.PUBLIC_YN = 1
+        ]]>
+    </select>
+
+    <!-- 내용으로 검색 SQL  -->
+    <select id="searchContent" parameterType="String" resultType="com.gardener.domain.Search">
+        <![CDATA[
+	        SELECT p.postnum, p.main_title, p.main_title_img, p.sub_title, p.content, p.category, p.total_cnt, p.favorite, p.create_date, m.nickname, m.intro
+			FROM MEMBER m JOIN POST p ON (m.LOGINID = p.LOGINID)
+			WHERE p.content LIKE '%'|| #{text} ||'%' AND p.PUBLIC_YN = 1
+        ]]>
+    </select>
+    
+	
+    <!-- 전체로 검색하는 SQL -->
+    <select id="searchAll" parameterType="String" resultType="com.gardener.domain.Search">
+        <![CDATA[
+	        SELECT p.postnum, p.main_title, p.main_title_img, p.sub_title, p.content, p.category, p.total_cnt, p.favorite, p.create_date, m.nickname, m.intro
+			FROM MEMBER m JOIN POST p ON (m.LOGINID = p.LOGINID)
+			WHERE (p.main_title LIKE '%'|| #{text} ||'%' OR m.nickname LIKE '%'|| #{text} ||'%' OR p.content LIKE '%'|| #{text} ||'%')
+			AND p.PUBLIC_YN = 1
+        ]]>
+    </select>
+    
+    <!-- 매거진에서 모든 글을 가져오는 SQL -->
+    <select id="magazine" parameterType="String" resultType="com.gardener.domain.Search">
+        <![CDATA[
+	        SELECT p.postnum, p.main_title, p.main_title_img, p.sub_title, p.content, p.category, p.total_cnt, p.favorite, p.create_date, m.nickname, m.intro
+			FROM MEMBER m JOIN POST p ON (m.LOGINID = p.LOGINID)
+			WHERE p.PUBLIC_YN = 1
+			ORDER BY p.create_date desc
+        ]]>
+    </select>
+
+
+</mapper>

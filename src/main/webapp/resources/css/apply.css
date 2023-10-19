@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Dotum";
+  src: url(../assets/font/KoPubDotumMedium.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Dotum";
+}
+
+/*작가 신청 시작*/
+div.apply {
+  font-size: 30px;
+  width: 150px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: inset 0 -10px 0 hsla(53, 89%, 50%, 0.53);
+  background-color: white;
+  text-align: center;
+}
+/*작가 신청 끝*/
+
+/* 본문 위치 시작*/
+body > div {
+  max-width: max-content;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+/* 본문 위치 끝*/
+
+/*내용 박스 크기 */
+.fieldset {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 800px;
+}
+
+/* 입력란 시작 */
+textarea {
+  width: 800px;
+  border-radius: 5px;
+  margin-top: 15px;
+  resize: none;
+}
+
+/*uri 입력란*/
+.uri {
+  width: 800px;
+  margin-top: 5px;
+}
+/* 입력란 끝*/
+
+/*추가 버튼 시작*/
+.add-btn {
+  background-color: white;
+  border: 0;
+  color: rgb(121, 193, 150);
+  font-weight: bold;
+
+  /*추가 버튼 끝*/
+}
+/*버튼 클릭시작*/
+.apply-btn {
+  text-align: center;
+  width: 200px;
+  height: 35px;
+  background-color: rgb(121, 193, 150);
+  color: aliceblue;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin-top: 30px;
+  border: none;
+}
+/*버튼 클릭 끝*/

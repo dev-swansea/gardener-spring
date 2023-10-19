@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="com.gardener.mappers.MygardenMapper">
+
+	<!-- 제목으로 검색 SQL -->
+    <select id="Mygarden" resultType="Search" parameterType="string">
+        <![CDATA[
+	        SELECT p.postnum, p.main_title, p.main_title_img, p.sub_title, p.content, p.category, p.total_cnt, p.favorite, p.create_date, m.nickname, m.intro
+			FROM MEMBER m JOIN POST p ON (m.LOGINID = p.LOGINID)
+			WHERE m.LOGINID = #{loginid}
+			ORDER BY p.create_date desc
+        ]]>
+    </select>
+
+
+
+</mapper>

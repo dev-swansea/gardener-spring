@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+div.logo {
+  margin: 25px 0px 0px 0px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  zoom: 1.8;
+}
+
+ .logo>img{
+ 	width: 230px;
+ 	height: 130px;
+ }
+
+.profile > b {
+  font-size: 2px;
+}
+
+form.login {
+  width: 250px;
+  margin: auto;
+  top: 300px;
+  zoom: 1.5;
+}
+
+form.login>input[name="loginid"] {
+  width: 200px;
+  margin: 0px 20px 5px;
+}
+
+form.login > input[name="password"] {
+  width: 200px;
+  margin: 0px 20px 15px;
+}
+
+form.login div {
+  font-size: 10px;
+  text-align: right;
+  width: 220px;
+}
+/*체크박스*/
+form.login input[type="checkbox"] {
+  margin: 0px 0px 2px 50px;
+  text-align: right;
+}
+
+/*로그인 버튼*/
+input.loginbtn {
+  color: white;
+  font-size: 15px;
+  letter-spacing: 2px;
+  background-color: rgb(121, 193, 150);
+  border-radius: 10px;
+  width: 205px;
+  height: 25px;
+  margin: 0px 20px;
+  border: none;
+}
+
+form.login > input submit a {
+  text-decoration: none;
+  color: white;
+}
+
+/*회원가입*/
+.sign-wrap{
+	text-align: center !important;	
+}
+
+form  span.signup {
+  font-size: 7px;
+  margin: 5px 5px 5px 35px;
+}
+
+form  span.signup a {
+  text-decoration: none;
+  color: gray;
+}
+
+/*아이디*/
+form  span.find-loginId {
+  font-size: 7px;
+  color: gray;
+  margin: 5px 5px 5px 0px;
+}
+
+form  span.find-loginId a {
+  text-decoration: none;
+  color: gray;
+}
+
+/*비밀번호*/
+form  span.find-pwd {
+  font-size: 7px;
+  color: gray;
+  margin: 5px 5px 2px 0px;
+}
+
+form  span.find-pwd a {
+  text-decoration: none;
+  color: gray;
+}

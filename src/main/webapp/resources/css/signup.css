@@ -1,0 +1,103 @@
+body{
+ font-family: Dotum, "돋움", Helvetica, sans-serif;
+}
+
+/*회원가입 입력란 위치*/
+.signup {
+  margin-left: 30%;
+  margin-top: 10px;  
+  font-size: 20px;
+}
+
+/*회원가입 정보 입력란 사이즈*/
+.signup input {
+	width: 60%; /*30%*/
+}
+
+/*회원가입 로고 사이즈*/
+.signupLogo>img{
+  width: 250px;
+  height: 130px;
+  margin-left: 18%;
+} 
+
+
+/*아이디, 필명 중복확인 버튼*/
+.signup [type="button"] {
+  width: 60%; /*30%*/
+  height: 40px;
+  border: none;
+  background-color:grey;
+  color: white; 
+}
+
+.signup .iddupchk {
+	margin-bottom: 20px;
+}
+
+/*회원가입버튼*/
+.bt-Signup {
+  width: 60%; /*30%*/
+  height: 40px;
+  letter-spacing: 2px;
+  background-color: rgb(121, 193, 150);
+  border-radius: 2px;
+  border: none;
+  color: white;
+}
+
+/*버튼 텍스트*/
+.bt-Signup > a {
+  text-decoration: none;
+  color: white;
+}
+
+.info #info__id {
+  position: relative;
+}
+
+#info__id button {
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  right: 3px;
+  margin: auto 0;
+  border-radius: 3px;
+}
+
+
+/*프로필 이미지 첨부*/
+.profile {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin-left: 24%; 
+  margin-top: 1px;  
+}
+
+.profile:hover {
+  cursor: pointer;
+}
+
+
+/*프로필 텍스트 위치*/
+.profileText{
+	font-weight: bolder;
+	margin-bottom: 2%;
+	margin-left: 27%;	/*12.5*/
+}
+
+.placehold-text {
+  width: 10px;
+}
+
+/*자기소개 입력란 사이즈*/
+textarea.form-control{
+  width: 60%; /*30%*/
+}
+
+
+

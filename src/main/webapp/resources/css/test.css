@@ -1,0 +1,118 @@
+/* FontAwesome for working BootSnippet :> */
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/*전체 배경 색*/
+#team {
+  background: white;
+}
+
+.btn:hover {
+        color: white;
+        background: #007b5e;
+    }
+
+/*+버튼의 style*/
+.btn-primary {
+  color: #fff;
+  background-color: #007b5e;
+  border-color: #007b5e;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/*title style*/
+section .section-title {
+  text-align: left;
+  color: #007b5e;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+/*card style*/
+#team .card {
+  background: white;
+  border: 1px solid;
+}
+
+
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+/*card 주변 effect*/
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-box-shadow: 5px 7px 9px -4px black;
+  -moz-box-shadow: 5px 7px 9px -4px black;
+  box-shadow: 5px 7px 9px -4px black;
+}
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+  min-height: 312px;
+}
+
+/*뒤에 있는 아이콘 style*/
+.backside .card a {
+  font-size: 18px;
+  color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: black !important;
+}
+
+.frontside .card .card-body img {
+  width: 300px;
+  height: 200px;
+  /*border-radius: 50%;*/
+  /* border:1px solid; */
+}

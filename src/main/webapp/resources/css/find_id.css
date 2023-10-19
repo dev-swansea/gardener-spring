@@ -1,0 +1,78 @@
+*{
+  box-sizing:border-box;
+}
+
+@font-face {
+  font-family:"Dotum" ;
+  src: url(../font/KoPubDotumMedium.ttf);
+}
+
+*{
+  box-sizing: border-box;
+  font-family: "Dotum"; 
+}
+
+div.logo{  
+  margin: 50px 0px 0px 0px;
+  text-align: center; 
+  display: block;
+  width: 100%;
+  height: 100%;
+  zoom: 1.5;  
+}
+
+
+ .logo>img{
+ 	width: 270px;
+ 	height: 180px; 
+ }
+ 
+form.find-loginId{
+width:250px;
+margin: auto;
+top: 300px;
+zoom: 1.5;
+}
+
+
+/*이름 입력란*/
+form.find-loginId input[name=name]{
+  width: 200px;
+  margin: 20px 20px 5px;  
+}
+
+/*이메일 입력란*/
+form.find-loginId>input[name=email]{
+ width: 200px;
+ margin:  0px 20px 15px; 
+}
+
+/*인증번호 입력란*/
+form.find-loginId>input[name=number]{
+  width: 200px;
+  margin:  0px 20px 15px; 
+}
+
+/*인증번호 전송버튼*/
+ form.find-loginId>input[name=button]{
+  width: 200px;
+  margin:  0px 20px 15px; 
+}
+
+
+form.find-loginId>button{
+  color: white;
+  font-size: 15px;
+  letter-spacing: 2px;
+  background-color: rgb(121, 193, 150);
+  border-radius: 10px;
+  width: 205px;
+  height: 25px;
+  margin : 0px 20px;
+  border: none;
+}
+
+form.find-loginId>button>a{
+  text-decoration: none;  
+  color: white;
+}

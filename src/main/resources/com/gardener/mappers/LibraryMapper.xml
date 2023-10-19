@@ -1,0 +1,81 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gardener.mappers.LibraryMapper">
+
+
+    <insert id="insertSubscribe">
+        insert into subscribe (id, writer_id, loginid) values(seq_subscribe.nextval, #{writerId}, #{loginid})
+    </insert>
+
+    <select id="getSubscribe" resultType="Integer">
+        select * from subscribe where loginid = #{loginid} and writer_id = #{writerId}
+    </select>
+
+    <resultMap id="postResultMap" type="Post">
+        <id property="postnum" column="postnum"/>
+        <result property="mainTitle" column="main_title"/>
+        <result property="subTitle" column="sub_title"/>
+        <result property="content" column="content"/>
+        <result property="mainTitleImg" column="main_title_img"/>
+        <result property="category" column="category"/>
+        <result property="publicYn" column="public_yn"/>
+        <collection property="member" resultMap="memberResultMap"/>
+    </resultMap>
+
+    <resultMap id="memberResultMap" type="Member">
+        <result property="loginid" column="loginid"/>
+        <result property="email" column="email"/>
+        <result property="nickname" column="nickname"/>
+        <result property="intro" column="intro"/>
+        <result property="profile" column="profile"/>
+        <association property="writer" autoMapping="true" resultMap="writerResultMap"/>
+    </resultMap>
+
+    <resultMap id="writerResultMap" type="writer">
+        <id property="loginid" column="loginid"/>
+    </resultMap>
+
+    <select id="getAllFavoritePostWithPaging" resultMap="postResultMap">
+        <![CDATA[
+        select  rn, id, postnum, main_title, sub_title, content, main_title_img, category, favorite, nickname
+        from (select /*+ INDEX_DESC(f SYS_C007984)*/ rownum rn, f.id, f.postnum, main_title, sub_title, content, main_title_img, category, favorite, nickname
+        from post p
+               join member m on p.loginid = m.loginid
+               join favorite f on f.postnum = p.postnum
+        where favorite > 0 and f.loginid = #{loginid} and rownum <= #{num} * 4) where rn > (#{num} - 1) * 4
+        ]]>
+    </select>
+
+    <delete id="deleteSubscibe">
+        delete from subscribe where loginid = #{loginid} and writer_id = #{writerId}
+    </delete>
+
+    <select id="getAllSubscribeWithPaging" resultType="Member">
+        <![CDATA[
+        select rn, id, writer_id loginid, nickname, intro, profile from
+        (select /*+ INDEX_DESC(s SYS_C007880)*/ rownum rn ,s.id, s.writer_id,nickname,intro,profile
+        from SUBSCRIBE s join member m on s.WRITER_ID = m.LOGINID where s.loginid = #{loginid} and rownum <= #{num} * 9)
+        where rn > (#{num} - 1) * 9
+        ]]>
+    </select>
+
+    <select id="getAllSubscribedWriter" resultType="Member">
+        select m.loginid, m.nickname, m.profile
+        from SUBSCRIBE s
+        join member m on s.writer_id = m.loginid
+        where s.loginid=#{loginid}
+    </select>
+
+    <select id="getAllSubscribedWriterPost" resultMap="postResultMap">
+        <![CDATA[
+        select * from
+        (select /*+INDEX_DESC(p POST_INDEX)*/ rownum rn, m.loginid, m.nickname, m.email, m.intro, m.profile, p.postnum, p.main_title, p.main_title_img, p.sub_title,
+        p.content, p.public_yn
+        from member m
+        left join post p on m.loginid = p.loginid where m.loginid = #{writerId} and rownum <= #{num}*4)
+        where rn > (#{num} - 1)*4
+        ]]>
+    </select>
+
+</mapper>

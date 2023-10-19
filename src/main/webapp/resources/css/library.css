@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    max-width: 1690px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+p {
+    overflow: hidden;
+}
+
+ul {
+    display: flex;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+li {
+    width: 50%;
+    list-style: none;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+li > span:hover {
+    cursor: pointer;
+    color: #63c76a;
+}
+
+.section-post {
+    display: flex;
+    height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.section-post > div:first-child {
+    width: 700px;
+}
+
+.section-post h4 {
+    margin: 0;
+    padding: 8px 0;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.section-post h5 {
+    margin: 0;
+    padding: 8px 0;
+    overflow: hidden;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.section-post h6 {
+    margin: 0;
+    padding: 8px 0;
+}
+
+.section-post > div:first-child > p {
+    color: #007bff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    width: 700px;
+    height: 100%;
+}
+
+.section-post > div:last-child {
+    width: 200px;
+    height: 100%;
+}
+
+
+.section-post > div:last-child > img {
+    width: 200px;
+    height: 100%;
+    border-radius: 10%;
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gardener.mappers.MemberMapper">
+
+    <resultMap type="Writer" id="Writer">
+    <id column="loginid" property="loginid"/>
+    <result column="type" property="type"/>
+    </resultMap>
+
+    <resultMap type="Member" id="Member">
+	<id column="loginid" property="loginid"/>
+	<result column="pwd" property="pwd"/>
+	<result column="email" property="email"/>
+	<result column="nickname" property="nickname"/>
+	<result column="intro" property="intro"/>
+	<result column="create_Date" property="createDate"/>
+	<result column="profile" property="profile"/>
+	<collection property="writer" resultMap="Writer"></collection>
+	</resultMap>
+
+
+	<!-- 지윤, 겨운 -->
+	<select id="selectByLoginid" resultMap="Member">
+    <![CDATA[
+    SELECT *
+    FROM member m left join writer w
+    on(m.loginid = w.loginid)
+    WHERE m.loginid= #{loginid}
+    ]]>
+	</select>
+
+    <select id="selectByNickname" resultType="Member">
+	SELECT * FROM member WHERE nickname= #{nickname}
+    </select>
+
+	<select id="selectByEmail" resultType="Member">
+		SELECT * FROM member WHERE email= #{email}
+	</select>
+
+
+	<insert id="insert" parameterType="Member">
+	 INSERT INTO member (loginid, pwd, email, nickname, intro, profile) 
+ 	VALUES (#{loginid}, #{pwd}, #{email}, #{nickname},#{intro},null)
+	</insert>
+
+
+
+	<update id="updateMember" parameterType="Member">
+		<![CDATA[
+		UPDATE member
+		SET pwd = #{pwd},
+		email = #{email},
+		nickname = #{nickname},
+		intro = #{intro}
+		WHERE LOGINID = #{loginid}
+		]]>
+	</update>
+	
+	<update id="updateprofile" parameterType="Member">
+		<![CDATA[
+		UPDATE member
+		SET profile = #{profile}
+		WHERE LOGINID = #{loginid}
+		]]>
+	</update>
+
+
+	<delete id="deleteMember" parameterType="String">
+		DELETE FROM member WHERE LOGINID = #{loginid}
+	</delete>
+
+	<delete id="deleteapply" parameterType="String">
+		DELETE FROM writer WHERE LOGINID = #{loginid}
+	</delete>
+
+</mapper>

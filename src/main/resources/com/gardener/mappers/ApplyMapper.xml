@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gardener.mappers.ApplyMapper">
+
+	<select id="selectByLoginid" resultType="Writer" parameterType="string">
+    <![CDATA[
+    SELECT * FROM writer WHERE loginid= #{loginid}
+    ]]>
+	</select>
+
+	<insert id="insertWriter" parameterType="com.gardener.domain.Writer"
+	>
+    <![CDATA[
+   INSERT INTO writer (loginid, type) 
+   VALUES (#{loginid}, 1)
+    ]]>
+	</insert>
+
+</mapper>

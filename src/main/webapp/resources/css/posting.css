@@ -1,0 +1,248 @@
+@font-face {
+    font-family: "Diphylleia";
+    src: url(/resources/assets/font/TitleFont/Diphylleia-Regular.ttf);
+}
+
+@font-face {
+    font-family: "article";
+    src: url(/resources/assets/font/article-font/KoPubDotumMedium.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* 헤더 시작 */
+/*header CSS*/
+h1 {
+    text-align: center;
+}
+
+h1 > a > img {
+    width: 250px;
+    height: 150px;
+}
+
+header > nav > ul {
+    list-style-type: none;
+    padding-left: 200px;
+    width: 100%;
+}
+
+header > nav > ul > li {
+    display: inline-block;
+    width: 19%;
+}
+
+header > nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+/*header CSS*//* 헤더 끝 */
+
+/* 섹션 시작 */
+section {
+    margin: 0 auto;
+}
+
+/* 섹션 헤더 시작 */
+
+
+/* 섹션 헤더 제목 시작 */
+div.section-header-image {
+    height: 400px;
+    width: 100vw;
+}
+
+section div.section-header-image > .main-image {
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    height: 500px;
+    background-size: cover;
+    position: relative;
+    margin-left: -500px;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+
+section div.section-header-title {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+section div.section-header-title > input[name="title"] {
+    width: 100%;
+    height: 53px;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: "Diphylleia";
+}
+
+section div.section-header-title input[name="subtitle"] {
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+    height: 24px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: "Diphylleia";
+}
+
+/* 메인이미지 시작 */
+section div.img-pic {
+    width: 50px;
+    position: relative;
+    top: -113px;
+    margin: 0 auto;
+}
+
+section div.img-pic img {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* 메인이미지 끝 */
+/* 섹션 헤더 끝 */
+
+/* 아티클 시작 */
+section > article {
+    margin-top: 77.4px;
+    min-height: 600px;
+    height: 100%;
+    font-family: "article";
+}
+
+section > article > div {
+    min-height: 400px;
+}
+
+/* 아티클 끝 */
+
+/* 비공개 설정 시작 */
+section div.secret {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+section div.secret > span {
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+div.secret > label.secret-toggle {
+    width: 100px;
+    height: 50px;
+    display: block;
+    position: relative;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 16px 3px rgba(0 0 0/ 15%);
+    cursor: pointer;
+}
+
+div.secret > label.secret-toggle > .secret-toggle-btn {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: rgb(121, 193, 150);
+}
+
+div.secret > input:checked ~ .secret-toggle {
+    background-color: rgb(121, 193, 150);
+}
+
+div.secret > input:checked ~ .secret-toggle .secret-toggle-btn {
+    left: calc(100% - 44px);
+    background-color: #fff;
+}
+
+.secret-toggle,
+.secret-toggle-btn {
+    transition: all 0.2s ease-in;
+}
+
+/* 비공개 설정 끝 */
+
+/* 카테고리 시작 */
+section div.category {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section div.category ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 30px 0;
+}
+
+section div.category ul > li {
+    width: 84px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+section div.category ul > li > input:checked ~ span {
+    font-size: larger;
+    font-weight: bold;
+}
+
+/* 카테고리 끝 */
+
+/* 글쓰기 등록 버튼 시작 */
+section div.post-btn {
+    display: flex;
+    justify-content: space-around;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section div.post-btn > button {
+    height: 50px;
+    width: 450px;
+}
+
+/* 글쓰기 버튼 끝 */
+
+
+div.footer > footer > div > p.footer-center {
+    text-align: center;
+}
+
+div.footer > footer {
+    display: block;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    /* position: fixed;
+    bottom: 0; */
+    width: 100%;
+}
+
+/*footer CSS*/
+
+/* 섹션 끝 */

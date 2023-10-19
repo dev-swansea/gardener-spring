@@ -1,0 +1,347 @@
+@font-face {
+    font-family: "Diphylleia";
+    src: url(../assets/font/TitleFont/Diphylleia-Regular.ttf);
+}
+
+@font-face {
+    font-family: "article";
+    src: url(../assets/font/article-font/KoPubDotumMedium.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img {
+    max-width: 500px;
+}
+
+ul {
+    list-style: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+/* 헤더 시작 */
+/*header CSS*/
+h1 {
+    text-align: center;
+}
+
+h1 > a > img {
+    width: 250px;
+    height: 150px;
+}
+
+header > nav > ul {
+    list-style-type: none;
+    padding-left: 200px;
+    width: 100%;
+}
+
+header > nav > ul > li {
+    display: inline-block;
+    width: 19%;
+}
+
+header > nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+/*header CSS*//* 헤더 끝 */
+
+
+hr {
+    margin: 20px 0;
+}
+
+.content-img {
+    text-align: center;
+}
+
+.content-img > img {
+    max-width: 400px;
+}
+
+/* 헤더 시작 */
+.main-logo {
+    margin: 0px auto;
+    max-width: 1400px;
+    text-align: center;
+}
+
+.main-logo > img {
+    height: 100%;
+}
+
+/* 헤더 끝 */
+
+/* 섹션 시작 */
+section {
+    margin: 0 auto;
+}
+
+/* 섹션 헤더 제목 시작 */
+.section-header-image {
+    height: 400px;
+}
+
+.section-header-image > .main-image {
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    height: 500px;
+    background-image: url(https://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2022/09/18/1e586277-48ba-4e8a-9b98-d8cdbe075d86.jpg);
+    background-size: cover;
+    position: relative;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* 섹션 헤더 제목 끝 */
+
+/* 섹션 헤더 타이틀 시작 */
+.section-header-title > .section-header-main-title {
+    font-size: 53px;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.section-header-title > .section-header-main-subtitle {
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+    height: 24px;
+}
+
+/* 섹션 헤더 글 정보 시작 */
+.section-header-info {
+    display: flex;
+    position: relative;
+    top: 40px;
+    justify-content: end;
+    font-weight: bold;
+}
+
+.section-header-info > .section-header-info-writer {
+    margin-right: 10px;
+}
+
+.section-header-info > .section-header-info-date {
+    /* 숫자 수평정렬 */
+    line-height: 1.4;
+    margin-right: 10px;
+}
+
+/* 섹션 헤더 글 정보 끝 */
+
+/* 섹션 헤더 끝 */
+
+/* 아티클 시작 */
+section article {
+    max-width: 900px;
+    margin: 50px auto 0;
+    min-height: 600px;
+    height: 100%;
+}
+
+/* 아티클 끝 */
+
+/* 버튼 섹션 시작 */
+.btn-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-header-icon {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    width: 50px;
+    height: 40px;
+}
+
+.section-header-icon:hover {
+    cursor: pointer;
+}
+
+.section-header-icon > div {
+    display: flex;
+}
+
+.section-header-icon > div > span {
+    position: relative;
+    top: 17px;
+}
+
+.section-header-icon img {
+    height: 40px;
+}
+
+.section-header-icon img.clicked {
+    background-color: #63c76a;
+}
+
+.modify-btn {
+    width: 450px;
+    display: flex;
+    justify-content: end;
+}
+
+/* 버튼 섹션 끝 */
+
+/* 작가 프로필 시작 */
+.writer-profile {
+    display: flex;
+    margin: 0 auto;
+    width: 900px;
+    height: 170px;
+    margin-top: 30px;
+    padding-left: 15px;
+}
+
+.writer-profile > .writer-profile-info {
+    display: flex;
+    flex-direction: column;
+    width: 730px;
+}
+
+.writer-profile > .writer-profile-info > .writer-profile-name {
+    font-weight: bold;
+}
+
+/* 작가 프로필 사진 시작*/
+.writer-profile > .writer-profile-pic {
+    width: 170px;
+    height: 170px;
+    text-align: center;
+}
+
+.writer-profile > .writer-profile-pic > img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.writer-profile > .writer-profile-pic > button.sub {
+    background-color: #63c76a;
+}
+
+/* 작가 프로필 사진 끝*/
+/* 작가 프로필 끝 */
+
+/* 댓글 시작 */
+.section-reply {
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.section-reply > div > button {
+    position: relative;
+    left: 820px;
+    width: 80px;
+    height: 40px;
+}
+
+.section-reply > div > textarea {
+    width: 900px;
+    height: 150px;
+    resize: none;
+}
+
+/* 댓글 끝 */
+
+/* 댓글 목록 시작*/
+.section-reply > div:first-child > div:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-reply > div:first-child > div:first-child > div {
+    display: flex;
+    align-items: center;
+}
+
+.section-reply-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-reply-list > .section-reply-list--top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-reply-list > .section-reply-list--top > div {
+    display: flex;
+}
+
+.reply-list--btn {
+    height: 30px;
+}
+
+.section-reply-list img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.edit-mode {
+    border: 1px solid #007bff;
+}
+
+/* 댓글 목록 끝*/
+
+/* 페이지 네이션 시작 */
+.pagination-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pagination {
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.pagination > li {
+    width: 40px;
+    text-align: center;
+}
+
+.pagination li.page-item.active > a {
+    color: #63c76a;
+    font-weight: bold;
+}
+
+/* 페이지 네이션 끝 */
+
+div.footer > footer > div > p.footer-center {
+    text-align: center;
+}
+
+div.footer > footer {
+    display: block;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    /* position: fixed;
+    bottom: 0; */
+    width: 100%;
+}
+
+/*footer CSS*/
+/* 섹션 끝 */
