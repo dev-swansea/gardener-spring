@@ -46,6 +46,7 @@
   let sub = "";
   let writerPost = "";
 
+
   $(".section-writer-wrapper").attr("data-writerid", writer[0].member.writer.loginid)
   $(".section-writer-wrapper img").attr("src", "/resources/images/profile.png");
   $(".section-writer-wrapper p:eq(0)").text(writer[0].member.nickname)
@@ -56,7 +57,8 @@
     if (subscribe !== "") {
       for (s of JSON.parse(subscribe)) {
         if (s.nickname !== $(".section-writer-wrapper p:eq(0)").text()) {
-          sub += `<div class="sb" data-writerid="\${s.loginid}" style="text-align: center; cursor: pointer"><img src="\${s.profile || '/resources/images/profile.png'}" alt='작가이미지'>`;
+          sub += `<div class="sb" data-writerid="\${s.loginid}" style="text-align: center; cursor: pointer">`
+          sub += `<img src="\${s.profile || '/resources/images/profile.png'}" alt='작가이미지'>`;
           sub += `<p>\${s.nickname}</p></div>`;
         }
       }
@@ -76,7 +78,7 @@
         writerPost += `<p>\${w.content}</p></div>`;
         writerPost += `<div><img src='\${w.mainTitleImg || "/resources/images/background9.png"}' alt='게시글이미지'></div>`;
         writerPost += `</div>`;
-        $("article").html("");
+        //$("article").html("");
         $("article").html(writerPost);
       }
 
@@ -87,7 +89,7 @@
         writerPost += `<div><img src='\${w.mainTitleImg || "/resources/images/background9.png"}' alt='게시글이미지'></div>`;
         writerPost += `</div>`;
         $("article").html(writerPost);
-        $(".hr").css("display", "block")
+        $(".hr").css("display", "block");
       }
     }
     if ($("article").text() === "") {

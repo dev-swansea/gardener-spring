@@ -73,8 +73,8 @@
         (select /*+INDEX_DESC(p POST_INDEX)*/ rownum rn, m.loginid, m.nickname, m.email, m.intro, m.profile, p.postnum, p.main_title, p.main_title_img, p.sub_title,
         p.content, p.public_yn
         from member m
-        left join post p on m.loginid = p.loginid where m.loginid = #{writerId} and rownum <= #{num}*4)
-        where rn > (#{num} - 1)*4
+        left join post p on m.loginid = p.loginid where m.loginid = #{writerId} and rownum <= #{num}*10)
+        where rn > (#{num} - 1)*10
         ]]>
     </select>
 

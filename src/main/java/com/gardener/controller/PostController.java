@@ -43,7 +43,7 @@ public class PostController {
   public ResponseEntity<String> uploadMainImage(MultipartFile image, String type) {
     ImgDTO dto = new ImgDTO();
     Gson gson = new Gson();
-    // 이게 맞나?.. 굳이 안해줘도 될꺼같은데
+
     if (image.isEmpty()) {
       throw new IllegalArgumentException();
     }
@@ -71,6 +71,7 @@ public class PostController {
       File saveFile = new File(uploadPath, saveFileName);
       image.transferTo(saveFile);
       dto.setImage(true); // 사실 필요 없음,
+
       fos = new FileOutputStream(new File(uploadPath, "s_" + saveFileName));
       Thumbnailator.createThumbnail(image.getInputStream(), fos, 250, 250);
 
@@ -95,13 +96,11 @@ public class PostController {
   @GetMapping(value = "/image-print", produces = {MediaType.IMAGE_GIF_VALUE, MediaType.IMAGE_JPEG_VALUE, MediaType.IMAGE_PNG_VALUE})
   public ResponseEntity<byte[]> printEditorImage(@RequestParam String filename, String sort) {
     String uploadPath = "";
-    log.info("filename => {}", filename);
+
     if (sort.equals("main")) {
       uploadPath = Paths.get(uploadDir, filename).toString();
-      log.info("메인 경로 => {}", uploadPath);
     } else {
       uploadPath = Paths.get(uploadDir, filename).toString();
-      log.info("콘텐츠 경로 => {}", uploadPath);
     }
 
     File uploadFile = new File(uploadPath);
@@ -121,7 +120,7 @@ public class PostController {
   /**
    * 날짜별로 폴더 만들기
    *
-   * @return
+   * @return 날짜별로 만들어진 파일 경로
    */
   private String getFolder() {
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");

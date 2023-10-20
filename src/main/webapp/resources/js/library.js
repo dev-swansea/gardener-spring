@@ -1,4 +1,5 @@
 let num = 2;
+let num2 = 2;
 let target = $(".hr")[0];
 let type = "favorite";
 let postResponse = JSON.parse($(".postResponse").val());
@@ -11,7 +12,6 @@ if ($(".nickname").val() === "") {
 // 좋아요 버튼
 $(".favorite").click(() => {
   postResponse = JSON.parse($(".postResponse").val()); // 없으면 안됨 ..
-  console.log(postResponse.length, " ")
   type = "favorite";
   $(".hr").css("display", "block");
   if (postResponse.length === 0) {
@@ -20,9 +20,11 @@ $(".favorite").click(() => {
       $("section").html(response);
     });
   }
+
   if (num !== 1) {
     num = 1;
   }
+
   $("section").html(""); // 없으면 구독버튼 클릭후 사라지지않음,
 })
 
@@ -100,17 +102,6 @@ $(".subscribe").click(() => {
       });
     },
   })
-
-  /*  $.get("/library/subscribe", (response) => {
-      $("section").html(response);
-      let memberResponse = $(".memberResponse").val();
-      printSubscribe(memberResponse);
-      if (memberResponse === 0) {
-        $.get("/resources/exception-page/subscribe-exception.html", (response) => {
-          $("section").html(response);
-        });
-      }
-    })*/
 })
 
 const printSubscribe = (response) => {
@@ -141,11 +132,11 @@ const printSubscribe = (response) => {
 
 const request = () => {
   let url = "";
-  type === "favorite" ? url = `/library/favorite/${num}` : url = `/library/subscribe/${num}`;
+  type === "favorite" ? url = `/library/favorite/${num}` : url = `/library/subscribe/${num2}`;
   $.ajax({
     url,
     success: (response) => {
-      num += 1;
+      num2 += 1;
       if (type === "favorite") {
         postResponse = response;
         $("section").append(printFavorite());
@@ -155,7 +146,7 @@ const request = () => {
       }
     },
     error  : (xhr, status) => {
-      console.log(status);
+      console.log(xhr);
     }
   })
 }

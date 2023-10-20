@@ -36,7 +36,6 @@ public class LibraryController {
     return "library";
   }
 
-  @ExceptionHandler(FindException.class)
   @GetMapping(value = "/favorite/{num}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   public @ResponseBody String getAllFavoritePostWithPaging(HttpSession session, @PathVariable int num) throws FindException {
     Member member = (Member) session.getAttribute("member");
