@@ -1,4 +1,4 @@
-![작가 신청](https://github.com/dev-swansea/gardener-spring/assets/79567992/cbf100e5-18aa-4215-b382-860994be893c)### gardener - spring
+### gardener - spring
 
 #### 너만의 정원을 가꿔봐! - 작가의 정원(23.09.21 ~ 23.10.13)
 
