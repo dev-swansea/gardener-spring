@@ -13,7 +13,8 @@
 
 #### <i>목표 - 데이터베이스의 구성부터 프론트와 백을 가리지 않고 개발해보기</i>
 
-<b>사용한 기술<b>
+<details>
+  <summary><b>사용한 기술<b></summary>
 <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=yellow">
 <img src="https://img.shields.io/badge/jquery-7DF1E?style=for-the-badge&logo=jquery&logoColor=yellow">
 <img src="https://img.shields.io/badge/JavaScript-0769AD?style=for-the-badge&logo=JavaScript&logoColor=yellow">
@@ -22,9 +23,12 @@
 <img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=Gitgub&logoColor=yellow">
 
 이 외에 뱃지로 없는 슬픈 JSP, Mybatis
+</details>
 
-![erd](https://github.com/dev-swansea/gardener-spring/assets/79567992/38d46583-aa08-4e3e-ad08-71cd175c1397)
+<details>
+<summary>ERD</summary>
+![erd](https://github.com/dev-swansea/gardener-spring/assets/79567992/7a7f67c7-bddd-469e-842e-e810bd2f586c)
+</details>
 
-
-
+---
 
