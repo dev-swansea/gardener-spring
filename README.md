@@ -45,20 +45,28 @@
 
 <b>내가 쓴 글 확인</b> <br>
 <img height="500" alt="내가 쓴 글" src="https://github.com/dev-swansea/gardener-spring/assets/79567992/93206bce-c9dc-4696-b3d2-8aba7d99b063"> <br>
-- 본인이 쓴 글을 확인할 수 있음
+- 본인이 쓴 글을 확인할 수 있음 <br>
 ---
 
 <i>이수완</i> <br>
-<b>게시글 작성</b>
+<b>게시글 작성</b> <br>
 <img src="https://github.com/dev-swansea/gardener-spring/assets/79567992/a7a0c610-a204-4dc9-bd1f-1c00473bb05b" height="500"><br>
-- toast ui editor를 이용하여 에디터 구현
+- toast ui editor를 이용하여 에디터 구현 (에디터 css 변경해 볼것)
 - <details>
   <summary>이미지 첨부 시 다이어그램 (부정확할 가능성 높음)</summary>
-  <img height="350" src="https://github.com/dev-swansea/gardener-spring/assets/79567992/33d9f0c1-86b9-4670-94d8-4d6dbbf47749">
+  <img height="350" src="https://github.com/dev-swansea/gardener-spring/assets/79567992/33d9f0c1-86b9-4670-94d8-4d6dbbf47749"><br>
+</details> 
 
-</details>
-- 
+- 한 개의 카테고리와 공개 / 비공개 설정을 해야함(추후에 카테고리 복수 설정 가능하게 만들 것) <br>
 
+<b>게시글 확인 및 좋아요, 구독, 댓글 작성</b> <br>
+<img height=500 src="https://github.com/dev-swansea/gardener-spring/assets/79567992/3332afa7-c0ae-4892-be8b-999ce347e160"><br>
+- 게시글 상세보기에서 좋아요 버튼을 누를 수 있음
+- 작가 구독 할 수 있음
+- 댓글을 작성할 수 있음
+  - 댓글에 페이징 처리가 되어있음 (대댓글로 변경해보고 싶다.)
+<br>
+작성글과 댓글에선 내가 작성한 경우 수정, 삭제가 가능해야 하므로 게시글에서의 필명(nickname)과 세션의 필명을 비교하여 판단하고 하여 수정, 삭제 버튼의 display를 변경하며 화면에 보여주고 있다. 
 
 
 ---
