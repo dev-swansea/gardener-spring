@@ -34,28 +34,50 @@
 ---
 <i>이문행</i>
 <br>
-<b>메인 화면</b>
 <br>
-<img src="https://github.com/dev-swansea/gardener-spring/assets/79567992/fc747d0e-0350-4b3d-ae74-3f77053310e2"  height="500px"> <br>
+⭐<b>메인 화면</b>
+<br>
+<details>
+  <summary>메인 화면 보기</summary>
+<img src="https://github.com/dev-swansea/gardener-spring/assets/79567992/fc747d0e-0350-4b3d-ae74-3f77053310e2"  height="500px"> 
+</details>
+
 - 부트스트랩을 이용하여 중앙 이미지의 slide를 구성 <br>
 - 카테고리를 클릭하면 해당 카테고리로 쓴 글 검색으로 이동 <br>
 - 카테고리 아래 좋아요 순으로 글이 보여짐(개인적으로, 공개된 최신글 순서대로 보여줄 것) <br>
-- 좋아요 글이 가장 많은 작가의 글을 가장 아래 카드 섹션으로 보여줌 (개인적으로, 기간별 좋아요 글이 많은 순서대로 변경할 것) <br>
+- 좋아요 글이 가장 많은 작가의 글을 가장 아래 카드 섹션으로 보여줌 (개인적으로, 기간별 좋아요 글이 많은 순서대로 변경할 것)
 
-<b>검색 후 화면</b> <br>
-<img height="500" alt="검색" src="https://github.com/dev-swansea/gardener-spring/assets/79567992/f514139f-ddcd-4d01-ab15-ee0d52697be2"> <br>
+<br>
+<br>
+
+⭐<b>검색 후 화면</b> 
+<details>
+  <summary>검색 후 화면 보기</summary>
+<img height="500" alt="검색" src="https://github.com/dev-swansea/gardener-spring/assets/79567992/f514139f-ddcd-4d01-ab15-ee0d52697be2"> 
+</details>
+
 - 글 제목, 작가명, 내용으로 검색이 가능함
+
+<br>
 <br>
 
-<b>내가 쓴 글 확인</b>
-<br>
+⭐<b>내가 쓴 글 확인</b>
+<details>
+  <summary>내가 쓴 글 확인 보기</summary>
 <img height="500" alt="내가 쓴 글" src="https://github.com/dev-swansea/gardener-spring/assets/79567992/93206bce-c9dc-4696-b3d2-8aba7d99b063"> 
-<br>
+</details>
+
 - 본인이 쓴 글을 확인할 수 있음
 
-<b>공개글 확인</b>
-<img height="500" alt="공개글 보기" src="https://github.com/dev-swansea/gardener-spring/assets/79567992/4b9fd983-b704-41e9-a84d-30e9e26ccc30">
 <br>
+<br>
+
+⭐<b>공개글 확인</b>
+<details>
+  <summary>공개글 확인 보기</summary>
+<img height="500" alt="공개글 보기" src="https://github.com/dev-swansea/gardener-spring/assets/79567992/4b9fd983-b704-41e9-a84d-30e9e26ccc30">
+</details>
+
 - 공개처리된 글을 확인할 수 있음
 
 
