@@ -1,6 +1,6 @@
 ### gardener - spring
 
-#### 너만의 정원을 가꿔봐! - 작가의 정원(23.09.14 ~ 23.10.13)
+#### 너만의 정원을 가꿔봐! - 작가의 정원(23.09.21 ~ 23.10.13)
 
 작가를 꿈꾸는 아마추어들의 글을 관리해 주고 좋은 기회를 만들어주는 서비스 - KOSTA final project
 
@@ -11,4 +11,20 @@
 |정겨운|마이페이지(회원정보 수정, 탈퇴, 프로필사진 변경), 작가 신청, 작가 신청 취소|
 |이문행|메인 페이지, 검색, 내가 쓴 글 확인|
 
-![erd](https://github.com/dev-swansea/gardener-spring/assets/79567992/2545963e-c83e-47e9-9ee5-edd2e157a7a9)
+#### <i>목표 - 데이터베이스의 구성부터 프론트와 백을 가리지 않고 개발해보기</i>
+
+<b>사용한 기술<b>
+<img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=yellow">
+<img src="https://img.shields.io/badge/jquery-7DF1E?style=for-the-badge&logo=jquery&logoColor=yellow">
+<img src="https://img.shields.io/badge/JavaScript-0769AD?style=for-the-badge&logo=JavaScript&logoColor=yellow">
+<img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=yellow">
+<img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=Bootstrap&logoColor=yellow">
+<img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=Gitgub&logoColor=yellow">
+
+이 외에 뱃지로 없는 슬픈 JSP, Mybatis
+
+![erd](https://github.com/dev-swansea/gardener-spring/assets/79567992/38d46583-aa08-4e3e-ad08-71cd175c1397)
+
+
+
+
