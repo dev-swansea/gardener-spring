@@ -44,7 +44,20 @@
 - 글 제목, 작가명, 내용으로 검색이 가능함 <br>
 
 <b>내가 쓴 글 확인</b> <br>
-<img height="500" alt="내가 쓴 글" src="https://github.com/dev-swansea/gardener-spring/assets/79567992/93206bce-c9dc-4696-b3d2-8aba7d99b063">
+<img height="500" alt="내가 쓴 글" src="https://github.com/dev-swansea/gardener-spring/assets/79567992/93206bce-c9dc-4696-b3d2-8aba7d99b063"> <br>
+- 본인이 쓴 글을 확인할 수 있음
+---
+
+<i>이수완</i> <br>
+<b>게시글 작성</b>
+<img src="https://github.com/dev-swansea/gardener-spring/assets/79567992/a7a0c610-a204-4dc9-bd1f-1c00473bb05b" height="500"><br>
+- toast ui editor를 이용하여 에디터 구현
+- <details>
+  <summary>이미지 첨부 시 다이어그램 (부정확할 가능성 높음)</summary>
+  <img height="350" src="https://github.com/dev-swansea/gardener-spring/assets/79567992/33d9f0c1-86b9-4670-94d8-4d6dbbf47749">
+
+</details>
+- 
 
 
 
