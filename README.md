@@ -44,10 +44,6 @@
 </details>
 
 - toast ui editor를 이용하여 에디터 구현 (에디터 css 변경해 볼것)
-- <details>
-  <summary>이미지 첨부 시 다이어그램 (부정확할 가능성 높음)</summary>
-  <img height="350" src="https://github.com/dev-swansea/gardener-spring/assets/79567992/33d9f0c1-86b9-4670-94d8-4d6dbbf47749">
-  </details>
 - 한 개의 카테고리와 공개 / 비공개 설정을 해야함(추후에 카테고리 복수 설정 가능하게 만들 것)
 
 <br>
